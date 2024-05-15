@@ -1,0 +1,20 @@
+
+‚
+java:S1118":Add a private constructor to hide the implicit public one.(‡Œïøşÿÿÿÿ8¼ÿÑ‚÷1J$bd3246a6-3fb8-4959-99d0-d9b76a14d9ad
+’
+java:S3252"JUse static access with "org.hibernate.cfg.AvailableSettings" for "DRIVER".(ò¥‡íıÿÿÿÿ8…€Ò‚÷1J$74938339-b7db-49de-b745-d1f385ffb16c
+
+java:S3252"GUse static access with "org.hibernate.cfg.AvailableSettings" for "URL".(›ÏØ£ıÿÿÿÿ8ˆ€Ò‚÷1J$8b4c221b-cd80-44bc-8873-39b23f017587
+‹
+java:S3252"HUse static access with "org.hibernate.cfg.AvailableSettings" for "USER".(è©šŒ8Š€Ò‚÷1J$6fcba137-d232-402b-bd9c-3b345e6e9f13
+}	java:S125"<This block of commented-out lines of code should be removed.(÷Äü8€Ò‚÷1J$2bbaf4c3-7350-4f2a-9b31-3db0b64afc18
+“
+java:S3252"KUse static access with "org.hibernate.cfg.AvailableSettings" for "DIALECT".(á¶ Óıÿÿÿÿ8€Ò‚÷1J$c9ef7713-8f0b-4b04-b69f-d74cdf8a9d34
+
+java:S3252"LUse static access with "org.hibernate.cfg.AvailableSettings" for "SHOW_SQL".(÷µ•–8‘€Ò‚÷1J$f917ab03-3d21-48e0-93cb-efcc814b0d4b
+¤
+java:S3252"aUse static access with "org.hibernate.cfg.AvailableSettings" for "CURRENT_SESSION_CONTEXT_CLASS".(ßÓÿ­8’€Ò‚÷1J$4ecf8ef7-0c56-4c3e-a528-c066e9d7f657
+“
+java:S3252"PUse static access with "org.hibernate.cfg.AvailableSettings" for "HBM2DDL_AUTO".(¢‰İ 8•€Ò‚÷1J$102d9eb3-4930-45f5-9dca-b322cbcb4937
+r	java:S106&"+Replace this use of System.out by a logger.(ˆ†ÓÏşÿÿÿÿ8 €Ò‚÷1J$11c7ec8b-2426-4628-9f38-613703202e95
+m	java:S106)"+Replace this use of System.err by a logger.(™ÆúÎ8£€Ò‚÷1J$d89a208e-376d-4b7a-b263-d14cbd57d7ba
