@@ -2,6 +2,8 @@ package com.app.bookstore.models;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "borrowers")
 public class Borrower {
@@ -15,6 +17,13 @@ public class Borrower {
     private String email;
     @Embedded
     private Address address;
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "borrowers_books",
+            joinColumns = {@JoinColumn(name = "borrower_id")},
+            inverseJoinColumns = {@JoinColumn(name = "book_id")}
+    )
+    private List<Book> books;
 
     public Borrower() {
     }
@@ -41,5 +50,13 @@ public class Borrower {
 
     public void setAddress(Address address) {
         this.address = address;
+    }
+
+    public List<Book> getBooks() {
+        return books;
+    }
+
+    public void setBooks(List<Book> books) {
+        this.books = books;
     }
 }
