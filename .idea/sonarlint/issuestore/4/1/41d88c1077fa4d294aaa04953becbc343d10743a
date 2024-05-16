@@ -1,9 +1,7 @@
 
 o
-java:S1874",Remove this use of "save"; it is deprecated.(Ğ…ó8Ø›‡’÷1J$582ec75c-980c-4b64-9cef-5b07ec7bfec0
+java:S1874",Remove this use of "save"; it is deprecated.(Ğ…ó8İ”æšø1J$385cd67e-463f-448e-ad0f-e850a2b28897
 v
-java:S1874".Remove this use of "update"; it is deprecated.(èé´üÿÿÿÿ8úê¦’÷1J$83987ba0-0800-44f3-9508-003a379e7880
+java:S1874".Remove this use of "update"; it is deprecated.(èé´üÿÿÿÿ8â”æšø1J$2620ab9e-c420-4c74-8a9c-103e10f3a368
 q
-java:S1874*".Remove this use of "delete"; it is deprecated.(Í¢ø¸8ë›‡’÷1J$7e2b0040-0b57-4694-b52e-89593590d3ec
-j
-java:S19059"'Remove this unnecessary cast to "Book".(·ùÚà8ö›‡’÷1J$64678fc4-166f-404f-8590-3f9a57c6a48d
+java:S1874.".Remove this use of "delete"; it is deprecated.(Í¢ø¸8æ”æšø1J$42ef1dbc-133b-4748-a065-563a52d9846d

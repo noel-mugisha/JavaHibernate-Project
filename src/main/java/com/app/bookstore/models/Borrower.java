@@ -17,7 +17,7 @@ public class Borrower {
     private String email;
     @Embedded
     private Address address;
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinTable(
             name = "borrowers_books",
             joinColumns = {@JoinColumn(name = "borrower_id")},

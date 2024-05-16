@@ -15,7 +15,7 @@ public class Author {
     private String name;
     @Column(nullable = false, unique = true)
     private String email;
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(
             name = "authors_books",
             joinColumns = {@JoinColumn(name = "author_id")},

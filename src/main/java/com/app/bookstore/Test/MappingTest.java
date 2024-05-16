@@ -14,7 +14,7 @@ import java.util.List;
 
 public class MappingTest {
     public static void main(String[] args) {
-        // Adding books
+        //Adding books
         BookDao bookDao = new BookDao();
         Book book1 = new Book();
         book1.setTitle("Book 1");
@@ -81,5 +81,34 @@ public class MappingTest {
         borrower3.setBooks(Arrays.asList(book1,book2,book3));
         borrowerDao.addBorrower(borrower3);
         System.out.println("Borrowers added successfully!");
+
+        // Fetching authors with EAGER fetching
+        System.out.println("Fetching authors with EAGER fetching:");
+        List<Author> authors = authorDao.getAllAuthors();  // Ensure this method fetches all authors
+        for (Author author : authors) {
+            System.out.println("Author: " + author.getName());
+            for (Book book : author.getBooks()) {
+                System.out.println("  Book: " + book.getTitle());
+            }
+        }
+        // Fetching borrowers with LAZY fetching
+        System.out.println("Fetching borrowers with LAZY fetching:");
+        try {
+            List<Borrower> borrowers = borrowerDao.getAllBorrowers();  // Ensure this method fetches all borrowers
+            for (Borrower borrower : borrowers) {
+                System.out.println("Borrower: " + borrower.getName());
+                try {
+                    for (Book book : borrower.getBooks()) {  // This will trigger a lazy load
+                        System.out.println("  Book: " + book.getTitle());
+                    }
+                } catch (Exception e) {
+                    System.err.println("Error loading books for borrower: " + borrower.getName());
+                    e.printStackTrace();
+                }
+            }
+        } catch (Exception e) {
+            System.err.println("Error fetching borrowers:");
+            e.printStackTrace();
+        }
     }
 }

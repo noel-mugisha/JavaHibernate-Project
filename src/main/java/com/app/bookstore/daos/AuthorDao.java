@@ -4,6 +4,9 @@ import com.app.bookstore.models.Author;
 import com.app.bookstore.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
+
+import java.util.List;
 
 public class AuthorDao {
     // adding an author
@@ -63,5 +66,22 @@ public class AuthorDao {
             e.printStackTrace();
         }
         return author;
+    }
+    // getting all authors
+    public List<Author> getAllAuthors() {
+        Transaction transaction = null;
+        List<Author> authors = null;
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            transaction = session.beginTransaction();
+            Query<Author> query = session.createQuery("FROM Author", Author.class);
+            authors = query.getResultList();
+            transaction.commit();
+        } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        }
+        return authors;
     }
 }

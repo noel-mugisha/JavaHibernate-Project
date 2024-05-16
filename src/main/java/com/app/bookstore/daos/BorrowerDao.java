@@ -5,6 +5,8 @@ import com.app.bookstore.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import java.util.List;
+
 public class BorrowerDao {
     // adding a borrower
     public void addBorrower(Borrower borrower) {
@@ -66,5 +68,22 @@ public class BorrowerDao {
             e.printStackTrace();
         }
         return borrower;
+    }
+
+    // getting all borrowers
+    public List<Borrower> getAllBorrowers() {
+        Transaction transaction = null;
+        List<Borrower> borrowers = null;
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            transaction = session.beginTransaction();
+            borrowers = session.createQuery("FROM Borrower", Borrower.class).getResultList();
+            transaction.commit();
+        } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        }
+        return borrowers;
     }
 }
